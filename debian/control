@@ -1,0 +1,48 @@
+Source: udisks2-qt5
+Section: admin
+Priority: optional
+Maintainer: Deepin Developer <deepin-dev@deepin.org>
+Uploaders: Deepin Packages Builder <packages@deepin.org>
+ Boyuan Yang <byang@debian.org>,
+ Arun Kumar Pariyar <openarungeek@gmail.com>,
+Build-Depends:
+ debhelper-compat (= 13),
+ qtbase5-dev,
+ pkg-config,
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Homepage: https://github.com/linuxdeepin/udisks2-qt5
+#Vcs-Browser
+#Vcs-Git
+
+Package: libudisks2-qt5-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libudisks2-qt5-0 (= ${binary:Version}),
+ ${misc:Depends},
+Description: UDisks2 library with Qt5 (development files)
+ Udisks2-qt5 provides the UDisks2 DBus interfaces binding
+ of Qt5.
+ .
+ This package provides the library development files.
+ .
+ This package is part of DDE (Deepin Desktop Environment).
+
+Package: libudisks2-qt5-0
+Architecture: any
+Multi-Arch: same
+Provides: libudisks2-qt5
+Conflicts: libudisks2-qt5
+Replaces: libudisks2-qt5
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: UDisks2 library with Qt5
+ Udisks2-qt5 provides the UDisks2 DBus interfaces binding
+ of Qt5.
+ .
+ This package provides the library files.
+ .
+ This package is part of DDE (Deepin Desktop Environment).
